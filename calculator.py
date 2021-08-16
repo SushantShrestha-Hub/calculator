@@ -137,8 +137,8 @@ btnDiv = Button(calc, width=6, height=2, text=chr(247), font=('cambria', 16, 'bo
 btnEqual = Button(calc, width=6, height=2, text='=', font=('cambria', 16, 'bold'), bd=4, bg='cadet blue'
                   , command=added_value.sum_of_total).grid(row=6, column=3, pady=1)
 btnZero = Button(calc, width=6, height=2, text="0", font=('cambria', 16, 'bold'), bd=4, bg='cadet blue',
-                 command=added_value.numberEnter).grid(row=6, column=1, pady=1)
+                 command=lambda: added_value.numberEnter(0)).grid(row=6, column=1, pady=1)
 btnDot = Button(calc, width=6, height=2, text='.', font=('cambria', 16, 'bold'), bd=4, bg='cadet blue',
-                command=added_value.numberEnter).grid(row=6, column=0, pady=1)
+                command=lambda: added_value.numberEnter('.')).grid(row=6, column=0, pady=1)
 
 cal.mainloop()
